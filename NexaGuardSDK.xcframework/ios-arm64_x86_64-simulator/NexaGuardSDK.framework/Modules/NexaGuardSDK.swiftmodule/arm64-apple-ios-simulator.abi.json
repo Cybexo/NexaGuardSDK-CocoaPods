@@ -9,7 +9,10 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "NexaGuardSDK"
+        "moduleName": "NexaGuardSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -919,9 +922,70 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "publisherCC",
+            "printedName": "publisherCC",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12NexaGuardSDK14BrandingConfigV11publisherCCSSSgvp",
+            "mangledName": "$s12NexaGuardSDK14BrandingConfigV11publisherCCSSSgvp",
+            "moduleName": "NexaGuardSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK14BrandingConfigV11publisherCCSSSgvg",
+                "mangledName": "$s12NexaGuardSDK14BrandingConfigV11publisherCCSSSgvg",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(logoUrl:brandColor:privacyUrl:layout:bannerText:showRejectButton:showCustomizeButton:acceptButtonText:rejectButtonText:manageButtonText:customizeLinkId:selectedVendorIds:selectedPurposesIds:vendorListVersion:configVersion:)",
+            "printedName": "init(logoUrl:brandColor:privacyUrl:layout:bannerText:showRejectButton:showCustomizeButton:acceptButtonText:rejectButtonText:manageButtonText:customizeLinkId:selectedVendorIds:selectedPurposesIds:vendorListVersion:configVersion:publisherCC:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1138,15 +1202,28 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText16showRejectButton0n9CustomizeP006acceptpM006rejectpM006managepM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersionACSSSg_A4SS2bA4SSaySiGSgAUSiSgAVtcfc",
-            "mangledName": "$s12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText16showRejectButton0n9CustomizeP006acceptpM006rejectpM006managepM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersionACSSSg_A4SS2bA4SSaySiGSgAUSiSgAVtcfc",
+            "usr": "s:12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText16showRejectButton0n9CustomizeP006acceptpM006rejectpM006managepM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersion11publisherCCACSSSg_A4TS2bA4TSaySiGSgAVSiSgAwTtcfc",
+            "mangledName": "$s12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText16showRejectButton0n9CustomizeP006acceptpM006rejectpM006managepM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersion11publisherCCACSSSg_A4TS2bA4TSaySiGSgAVSiSgAwTtcfc",
             "moduleName": "NexaGuardSDK",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "init_kind": "Designated"
           },
@@ -2962,6 +3039,16 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "NexaGuardSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -7069,6 +7156,13 @@
       "value": "\"nxg_vendor_list_version\""
     },
     {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/BannerHTMLBuilder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3196,
+      "length": 1,
+      "value": "3"
+    },
+    {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/WebCMPStyleToggle.swift",
       "kind": "BooleanLiteral",
       "offset": 355,
@@ -7127,7 +7221,7 @@
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/CMPBannerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 576,
+      "offset": 575,
       "length": 5,
       "value": "false"
     },
@@ -7442,7 +7536,7 @@
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
       "kind": "BooleanLiteral",
-      "offset": 19675,
+      "offset": 20302,
       "length": 5,
       "value": "false"
     },

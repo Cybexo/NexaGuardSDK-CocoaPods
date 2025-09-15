@@ -27,7 +27,8 @@ public struct BrandingConfig {
   public let selectedPurposesIds: [Swift.Int]?
   public let vendorListVersion: Swift.Int?
   public let configVersion: Swift.Int?
-  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showRejectButton: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?)
+  public let publisherCC: Swift.String?
+  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showRejectButton: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?)
   public init?(json: [Swift.String : Any])
 }
 public struct ConsentSelections : Swift.Codable {
