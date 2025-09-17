@@ -3689,8 +3689,8 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "ObjectiveC",
+        "printedName": "ObjectiveC",
         "declKind": "Import",
         "moduleName": "NexaGuardSDK",
         "declAttributes": [
@@ -3699,8 +3699,8 @@
       },
       {
         "kind": "Import",
-        "name": "ObjectiveC",
-        "printedName": "ObjectiveC",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "NexaGuardSDK"
       },
@@ -7158,7 +7158,7 @@
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/BannerHTMLBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 3196,
+      "offset": 5506,
       "length": 1,
       "value": "3"
     },
@@ -7234,50 +7234,78 @@
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeDetailsViewController.swift",
+      "kind": "Array",
+      "offset": 1242,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeDetailsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1208,
+      "offset": 1271,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 837,
+      "offset": 1034,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Array",
-      "offset": 1091,
+      "offset": 1288,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Dictionary",
-      "offset": 1153,
+      "offset": 1350,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
+      "kind": "Array",
+      "offset": 1581,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
+      "kind": "Array",
+      "offset": 1645,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
+      "kind": "Dictionary",
+      "offset": 1714,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Dictionary",
-      "offset": 1398,
+      "offset": 1786,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Dictionary",
-      "offset": 1455,
+      "offset": 1843,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 13755,
+      "offset": 20617,
       "length": 5,
       "value": "false"
     },
@@ -7298,16 +7326,156 @@
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1137,
+      "offset": 1218,
+      "length": 17,
+      "value": "\"specialFeatures\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1333,
       "length": 17,
       "value": "\"specialFeatures\""
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
       "kind": "Array",
-      "offset": 1235,
+      "offset": 1376,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1501,
+      "length": 10,
+      "value": "\"features\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1609,
+      "length": 10,
+      "value": "\"features\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "Array",
+      "offset": 1645,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1696,
+      "length": 17,
+      "value": "\"specialPurposes\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1811,
+      "length": 17,
+      "value": "\"specialPurposes\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "Array",
+      "offset": 1854,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "Dictionary",
+      "offset": 2018,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2052,
+      "length": 10,
+      "value": "\"purposes\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2315,
+      "length": 15,
+      "value": "\"illustrations\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2379,
+      "length": 15,
+      "value": "\"illustrations\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2525,
+      "length": 6,
+      "value": "\"text\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2689,
+      "length": 10,
+      "value": "\"purposes\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2814,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2876,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2894,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2955,
+      "length": 15,
+      "value": "\"illustrations\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3019,
+      "length": 15,
+      "value": "\"illustrations\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3165,
+      "length": 6,
+      "value": "\"text\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/SecondLayerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3241,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
@@ -7319,65 +7487,72 @@
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1030,
+      "offset": 1007,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "Dictionary",
-      "offset": 1086,
+      "offset": 1060,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "Dictionary",
-      "offset": 1172,
+      "offset": 1144,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1225,
+      "offset": 1178,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1280,
+      "offset": 1221,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1516,
+      "offset": 1448,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "Dictionary",
-      "offset": 1577,
+      "offset": 1507,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1979,
+      "offset": 1902,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
       "kind": "Dictionary",
-      "offset": 2035,
+      "offset": 1958,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/VendorDetailsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3257,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/BitTools.swift",
