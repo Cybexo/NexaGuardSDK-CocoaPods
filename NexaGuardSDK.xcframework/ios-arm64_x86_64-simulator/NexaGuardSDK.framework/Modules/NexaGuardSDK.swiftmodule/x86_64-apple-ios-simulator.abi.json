@@ -7156,13 +7156,6 @@
       "value": "\"nxg_vendor_list_version\""
     },
     {
-      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/BannerHTMLBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5506,
-      "length": 1,
-      "value": "3"
-    },
-    {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/WebCMPStyleToggle.swift",
       "kind": "BooleanLiteral",
       "offset": 355,
