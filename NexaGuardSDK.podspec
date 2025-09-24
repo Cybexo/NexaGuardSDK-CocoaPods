@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # ---- Identity -----------------------------------------------------------
   s.name             = 'NexaGuardSDK'            # <- what devs put in Podfile
-  s.version          = '1.0.23'
+  s.version          = '1.0.24'
   s.summary          = 'IAB-TCF-compliant consent SDK for iOS'
   s.description      = <<-DESC
     NexaGuardSDK provides a drop-in CMP banner, second-layer, and storage
