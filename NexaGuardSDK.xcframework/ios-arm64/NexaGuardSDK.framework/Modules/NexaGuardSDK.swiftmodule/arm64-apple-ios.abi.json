@@ -7486,6 +7486,13 @@
       "value": "\"nxg_vendor_list_version\""
     },
     {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/BannerHTMLBuilder.swift",
+      "kind": "StringLiteral",
+      "offset": 547,
+      "length": 20,
+      "value": "\"nxg_customize_link\""
+    },
+    {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/components\/WebCMPStyleToggle.swift",
       "kind": "BooleanLiteral",
       "offset": 355,
@@ -8000,13 +8007,13 @@
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/NxgLog.swift",
       "kind": "BooleanLiteral",
       "offset": 318,
-      "length": 4,
-      "value": "true"
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/NxgLog.swift",
       "kind": "StringLiteral",
-      "offset": 433,
+      "offset": 434,
       "length": 9,
       "value": "\"NXG-CMP\""
     },
