@@ -321,8 +321,8 @@
           },
           {
             "kind": "Var",
-            "name": "showRejectButton",
-            "printedName": "showRejectButton",
+            "name": "showReject",
+            "printedName": "showReject",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -332,8 +332,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:12NexaGuardSDK14BrandingConfigV16showRejectButtonSbvp",
-            "mangledName": "$s12NexaGuardSDK14BrandingConfigV16showRejectButtonSbvp",
+            "usr": "s:12NexaGuardSDK14BrandingConfigV10showRejectSbvp",
+            "mangledName": "$s12NexaGuardSDK14BrandingConfigV10showRejectSbvp",
             "moduleName": "NexaGuardSDK",
             "declAttributes": [
               "HasStorage",
@@ -355,8 +355,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12NexaGuardSDK14BrandingConfigV16showRejectButtonSbvg",
-                "mangledName": "$s12NexaGuardSDK14BrandingConfigV16showRejectButtonSbvg",
+                "usr": "s:12NexaGuardSDK14BrandingConfigV10showRejectSbvg",
+                "mangledName": "$s12NexaGuardSDK14BrandingConfigV10showRejectSbvg",
                 "moduleName": "NexaGuardSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -983,9 +983,53 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "consentMode",
+            "printedName": "consentMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12NexaGuardSDK14BrandingConfigV11consentModeSbvp",
+            "mangledName": "$s12NexaGuardSDK14BrandingConfigV11consentModeSbvp",
+            "moduleName": "NexaGuardSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK14BrandingConfigV11consentModeSbvg",
+                "mangledName": "$s12NexaGuardSDK14BrandingConfigV11consentModeSbvg",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(logoUrl:brandColor:privacyUrl:layout:bannerText:showRejectButton:showCustomizeButton:acceptButtonText:rejectButtonText:manageButtonText:customizeLinkId:selectedVendorIds:selectedPurposesIds:vendorListVersion:configVersion:publisherCC:)",
+            "printedName": "init(logoUrl:brandColor:privacyUrl:layout:bannerText:showReject:showCustomizeButton:acceptButtonText:rejectButtonText:manageButtonText:customizeLinkId:selectedVendorIds:selectedPurposesIds:vendorListVersion:configVersion:publisherCC:consentMode:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1216,11 +1260,18 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText16showRejectButton0n9CustomizeP006acceptpM006rejectpM006managepM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersion11publisherCCACSSSg_A4TS2bA4TSaySiGSgAVSiSgAwTtcfc",
-            "mangledName": "$s12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText16showRejectButton0n9CustomizeP006acceptpM006rejectpM006managepM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersion11publisherCCACSSSg_A4TS2bA4TSaySiGSgAVSiSgAwTtcfc",
+            "usr": "s:12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText10showReject0N15CustomizeButton06acceptqM006rejectqM006manageqM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersion11publisherCC11consentModeACSSSg_A4US2bA4USaySiGSgAWSiSgAxUSbtcfc",
+            "mangledName": "$s12NexaGuardSDK14BrandingConfigV7logoUrl10brandColor07privacyG06layout10bannerText10showReject0N15CustomizeButton06acceptqM006rejectqM006manageqM015customizeLinkId17selectedVendorIds0x8PurposesZ017vendorListVersion13configVersion11publisherCC11consentModeACSSSg_A4US2bA4USaySiGSgAWSiSgAxUSbtcfc",
             "moduleName": "NexaGuardSDK",
             "declAttributes": [
               "AccessControl"
@@ -3680,6 +3731,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "UITraitChangeObservable",
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
@@ -5751,6 +5809,13 @@
       },
       {
         "kind": "Import",
+        "name": "ObjectiveC",
+        "printedName": "ObjectiveC",
+        "declKind": "Import",
+        "moduleName": "NexaGuardSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -5809,6 +5874,227 @@
                   "Final"
                 ],
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "googleConsentModeEnabled",
+            "printedName": "googleConsentModeEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvp",
+            "mangledName": "$s12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvp",
+            "moduleName": "NexaGuardSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvg",
+                "mangledName": "$s12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvg",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvs",
+                "mangledName": "$s12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvs",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvM",
+                "mangledName": "$s12NexaGuardSDK0aB3CMPC24googleConsentModeEnabledSbvM",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "debugPrintFirebaseConsentAPIPresence",
+            "printedName": "debugPrintFirebaseConsentAPIPresence()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12NexaGuardSDK0aB3CMPC36debugPrintFirebaseConsentAPIPresenceyyF",
+            "mangledName": "$s12NexaGuardSDK0aB3CMPC36debugPrintFirebaseConsentAPIPresenceyyF",
+            "moduleName": "NexaGuardSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTCFAdvertiserConsentMode",
+            "printedName": "setTCFAdvertiserConsentMode(enabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12NexaGuardSDK0aB3CMPC27setTCFAdvertiserConsentMode7enabledySb_tF",
+            "mangledName": "$s12NexaGuardSDK0aB3CMPC27setTCFAdvertiserConsentMode7enabledySb_tF",
+            "moduleName": "NexaGuardSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "deferGCMUntilHostReady",
+            "printedName": "deferGCMUntilHostReady",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvp",
+            "mangledName": "$s12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvp",
+            "moduleName": "NexaGuardSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvg",
+                "mangledName": "$s12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvg",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvs",
+                "mangledName": "$s12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvs",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvM",
+                "mangledName": "$s12NexaGuardSDK0aB3CMPC22deferGCMUntilHostReadySbvM",
+                "moduleName": "NexaGuardSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -6476,6 +6762,7 @@
         "intro_tvOS": "9.0",
         "intro_watchOS": "2.0",
         "declAttributes": [
+          "AddressableForDependencies",
           "Frozen",
           "Available",
           "Available",
@@ -6841,6 +7128,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sequence",
             "printedName": "Sequence",
             "children": [
@@ -6890,6 +7184,41 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
             "name": "ReferenceConvertible",
             "printedName": "ReferenceConvertible",
             "children": [
@@ -6934,38 +7263,32 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       }
@@ -6973,6 +7296,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/models\/BrandingConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1397,
+      "length": 4,
+      "value": "true"
+    },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/models\/ConsentSelections.swift",
       "kind": "Array",
@@ -7670,41 +8000,97 @@
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/NxgLog.swift",
       "kind": "BooleanLiteral",
       "offset": 318,
-      "length": 5,
-      "value": "false"
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/NxgLog.swift",
       "kind": "StringLiteral",
-      "offset": 434,
+      "offset": 433,
       "length": 9,
       "value": "\"NXG-CMP\""
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
       "kind": "Array",
-      "offset": 833,
+      "offset": 851,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
       "kind": "Array",
-      "offset": 877,
+      "offset": 895,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
       "kind": "Array",
-      "offset": 926,
+      "offset": 944,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
       "kind": "BooleanLiteral",
-      "offset": 20302,
+      "offset": 1250,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1465,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1499,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "StringLiteral",
+      "offset": 1589,
+      "length": 19,
+      "value": "\"nxg.cmp.bootstrap\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "StringLiteral",
+      "offset": 1686,
+      "length": 25,
+      "value": "\"nxg.cmp.lastConsentMode\""
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1857,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15135,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Desktop\/NexaGuardSDK-iOS\/cmp\/cmp\/NexaGuardCMP.swift",
+      "kind": "BooleanLiteral",
+      "offset": 39856,
       "length": 5,
       "value": "false"
     },

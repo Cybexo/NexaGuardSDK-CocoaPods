@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios18.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name NexaGuardSDK
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios18.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name NexaGuardSDK
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 import ObjectiveC
 import Swift
@@ -17,7 +18,7 @@ public struct BrandingConfig {
   public let privacyUrl: Swift.String?
   public let layout: Swift.String?
   public let bannerText: Swift.String?
-  public let showRejectButton: Swift.Bool
+  public let showReject: Swift.Bool
   public let showCustomizeButton: Swift.Bool
   public let acceptButtonText: Swift.String?
   public let rejectButtonText: Swift.String?
@@ -28,14 +29,21 @@ public struct BrandingConfig {
   public let vendorListVersion: Swift.Int?
   public let configVersion: Swift.Int?
   public let publisherCC: Swift.String?
-  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showRejectButton: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?)
+  public let consentMode: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showReject: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?, consentMode: Swift.Bool = true)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(json: [Swift.String : Any])
+  #endif
 }
 public struct ConsentSelections : Swift.Codable {
   public var purposeIds: [Swift.Int]
   public var vendorIds: [Swift.Int]
   public init(purposeIds: [Swift.Int] = [], vendorIds: [Swift.Int] = [])
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(json: [Swift.String : Any])
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -43,7 +51,9 @@ public struct PurposeModel : Swift.Codable {
   public let id: Swift.Int
   public let name: Swift.String
   public let description: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int, name: Swift.String, description: Swift.String? = nil)
+  #endif
   public static func parse(from gvl: [Swift.String : Any]) -> [NexaGuardSDK.PurposeModel]
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -57,17 +67,25 @@ public struct VendorModel : Swift.Codable {
   public var legitimateInterests: [Swift.Int] {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int, name: Swift.String, policyUrl: Swift.String? = nil, purposes: [Swift.Int] = [], legIntPurposes: [Swift.Int] = [])
+  #endif
   public static func parse(from gvl: [Swift.String : Any], config: NexaGuardSDK.BrandingConfig) -> [NexaGuardSDK.VendorModel]
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class ConsentStorage {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func saveConsent(_ consented: Swift.Bool, tcString: Swift.String?)
+  #endif
   public static func getConsent() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getTCString() -> Swift.String?
+  #endif
   public static func saveGVL(_ json: [Swift.String : Any])
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadGVL() -> [Swift.String : Any]?
+  #endif
   public static func getConfigVersion() -> Swift.Int
   public static func setConfigVersion(_ version: Swift.Int)
   public static func getVendorListVersion() -> Swift.Int
@@ -80,13 +98,19 @@ public protocol SecondLayerDelegate : AnyObject {
   func didSaveSelections(purposes: [Swift.Int], vendors: [Swift.Int])
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SecondLayerViewController : UIKit.UIViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(brandingConfig: NexaGuardSDK.BrandingConfig, purposes: [NexaGuardSDK.PurposeModel], vendors: [NexaGuardSDK.VendorModel], rawVendors: [[Swift.String : Any]], gvl: [Swift.String : Any], initialSelections: NexaGuardSDK.ConsentSelections?)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @objc deinit
 }
 extension NexaGuardSDK.SecondLayerViewController : UIKit.UIPageViewControllerDataSource, UIKit.UIPageViewControllerDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pvc: UIKit.UIPageViewController, viewControllerBefore vc: UIKit.UIViewController) -> UIKit.UIViewController?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pvc: UIKit.UIPageViewController, viewControllerAfter vc: UIKit.UIViewController) -> UIKit.UIViewController?
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pvc: UIKit.UIPageViewController, didFinishAnimating _: Swift.Bool, previousViewControllers _: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
 }
 public class BitWriter {
@@ -101,21 +125,31 @@ public class BitWriter {
 }
 public class BitReader {
   public init(data: Foundation.Data)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func readBit() -> Swift.Bool?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func readBits(_ n: Swift.Int) -> [Swift.Bool]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func readUInt(_ n: Swift.Int) -> Swift.UInt?
+  #endif
   public func skip(_ n: Swift.Int)
   public func remainingBits() -> Swift.Int
   @objc deinit
 }
 extension Foundation.Data {
   public func base64URLEncodedString() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func fromBase64Url(_ str: Swift.String) -> Foundation.Data?
+  #endif
 }
 public enum NXGCMPUtils {
   public static func encodeTCString(purposeConsents: [Swift.Int], purposeLegitimateInterests: [Swift.Int], specialFeatureOptins: [Swift.Int], vendorConsents: [Swift.Int], vendorLegitimateInterests: [Swift.Int], gvlVendorIds: [Swift.Int], cmpId: Swift.Int = 471, cmpVersion: Swift.Int = 1, consentScreen: Swift.Int = 0, consentLanguage: Swift.String = "EN", vendorListVersion: Swift.Int = 1, policyVersion: Swift.Int = 1, isServiceSpecific: Swift.Bool = false, useNonStandardStacks: Swift.Bool = false, purposeOneTreatment: Swift.Bool = false, publisherCC: Swift.String = "US") -> Swift.String
   public static func encodeDisclosedVendorsSegment(allowedVendorIds: [Swift.Int], gvlVendorIds: [Swift.Int]) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func decodeTCString(_ tc: Swift.String) -> [Swift.String : Any]?
+  #endif
   public static func encodeTCString(purposes: [Swift.Int], vendors: [Swift.Int], gvlVendorIds: [Swift.Int]) -> Swift.String
   public static func csvString(from ids: [Swift.Int]) -> Swift.String
   public static func parseCSV(_ csv: Swift.String) -> [Swift.Int]
@@ -123,7 +157,9 @@ public enum NXGCMPUtils {
 }
 public enum NxgLogLevel : Swift.Int {
   case verbose, debug, info, warning, error
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -132,11 +168,21 @@ public enum NxgLogLevel : Swift.Int {
 @_hasMissingDesignatedInitializers public class NxgLog {
   public static var enabled: Swift.Bool
   public static var tagPrefix: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func v(_ tag: Swift.String, _ msg: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func d(_ tag: Swift.String, _ msg: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func i(_ tag: Swift.String, _ msg: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func w(_ tag: Swift.String, _ msg: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func e(_ tag: Swift.String, _ msg: Swift.String, _ error: (any Swift.Error)? = nil)
+  #endif
   @objc deinit
 }
 public enum ConsentAction : Swift.Equatable {
@@ -147,22 +193,38 @@ public enum ConsentAction : Swift.Equatable {
 }
 @_hasMissingDesignatedInitializers public class NexaGuardCMP {
   public static let shared: NexaGuardSDK.NexaGuardCMP
+  public var googleConsentModeEnabled: Swift.Bool
+  public func debugPrintFirebaseConsentAPIPresence()
+  public func setTCFAdvertiserConsentMode(enabled: Swift.Bool)
+  public var deferGCMUntilHostReady: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func initialize(settingsId: Swift.String, completion: (() -> Swift.Void)? = nil)
+  #endif
   public func acceptAllSelections()
   public func rejectAllSelections()
   public func applyCustomSelections(purposes: [Swift.Int], vendors: [Swift.Int])
+  #if compiler(>=5.3) && $NonescapableTypes
   public func makeTCStringRejectAll() -> Swift.String?
+  #endif
   public func updateGoogleConsentModeFromTCString(_ tcString: Swift.String)
   public func showBanner(force: Swift.Bool = false)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class NXGAPIServer {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func fetchBannerConfigAndMaybeGVL(settingsId: Swift.String, completion: @escaping (NexaGuardSDK.BrandingConfig?, [Swift.String : Any]?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func fetchBrandingConfig(settingsId: Swift.String, completion: @escaping (NexaGuardSDK.BrandingConfig?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func fetchGVL(completion: @escaping ([Swift.String : Any]?) -> Swift.Void)
+  #endif
   public static func initializeCache()
   public static func clearCache()
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func postAnalyticsSessionEvent(settingsId: Swift.String, deviceId: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 extension NexaGuardSDK.NxgLogLevel : Swift.Equatable {}
