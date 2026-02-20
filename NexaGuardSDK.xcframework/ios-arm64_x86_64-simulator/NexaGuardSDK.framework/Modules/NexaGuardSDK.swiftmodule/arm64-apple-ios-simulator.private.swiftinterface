@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 import ObjectiveC
+import SafariServices
 import Swift
 import UIKit
 import WebKit
@@ -30,8 +31,13 @@ public struct BrandingConfig {
   public let configVersion: Swift.Int?
   public let publisherCC: Swift.String?
   public let consentMode: Swift.Bool
+  public let userCountry: Swift.String?
+  public let usRegime: Swift.String?
+  public let usState: Swift.String?
+  public let isUserEU: Swift.Bool?
+  public let gpc: Swift.Bool?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showReject: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?, consentMode: Swift.Bool = true)
+  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showReject: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?, consentMode: Swift.Bool = true, userCountry: Swift.String? = nil, usRegime: Swift.String? = nil, usState: Swift.String? = nil, isUserEU: Swift.Bool? = nil, gpc: Swift.Bool? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(json: [Swift.String : Any])
@@ -146,7 +152,8 @@ extension Foundation.Data {
 }
 public enum NXGCMPUtils {
   public static func encodeTCString(purposeConsents: [Swift.Int], purposeLegitimateInterests: [Swift.Int], specialFeatureOptins: [Swift.Int], vendorConsents: [Swift.Int], vendorLegitimateInterests: [Swift.Int], gvlVendorIds: [Swift.Int], cmpId: Swift.Int = 471, cmpVersion: Swift.Int = 1, consentScreen: Swift.Int = 0, consentLanguage: Swift.String = "EN", vendorListVersion: Swift.Int = 1, policyVersion: Swift.Int = 1, isServiceSpecific: Swift.Bool = false, useNonStandardStacks: Swift.Bool = false, purposeOneTreatment: Swift.Bool = false, publisherCC: Swift.String = "US") -> Swift.String
-  public static func encodeDisclosedVendorsSegment(allowedVendorIds: [Swift.Int], gvlVendorIds: [Swift.Int]) -> Swift.String
+  public static func encodeDisclosedVendorsSegment(disclosedVendorIds: [Swift.Int], gvlVendorIds: [Swift.Int]) -> Swift.String
+  public static func encodeAllowedVendorsSegment(allowedVendorIds: [Swift.Int], gvlVendorIds: [Swift.Int]) -> Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
   public static func decodeTCString(_ tc: Swift.String) -> [Swift.String : Any]?
   #endif
@@ -211,6 +218,19 @@ public enum ConsentAction : Swift.Equatable {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class NXGAPIServer {
+  public struct DebugRouting {
+    public var enabled: Swift.Bool
+    public var token: Swift.String?
+    public var geo: Swift.String?
+    public var state: Swift.String?
+    public var debugUI: Swift.Bool
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(enabled: Swift.Bool = true, token: Swift.String? = nil, geo: Swift.String? = nil, state: Swift.String? = nil, debugUI: Swift.Bool = true)
+    #endif
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func setDebugRouting(_ routing: NexaGuardSDK.NXGAPIServer.DebugRouting?)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public static func fetchBannerConfigAndMaybeGVL(settingsId: Swift.String, completion: @escaping (NexaGuardSDK.BrandingConfig?, [Swift.String : Any]?) -> Swift.Void)
   #endif
