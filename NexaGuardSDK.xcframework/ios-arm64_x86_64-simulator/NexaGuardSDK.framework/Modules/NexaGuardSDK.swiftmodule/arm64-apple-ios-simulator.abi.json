@@ -14457,13 +14457,13 @@
       "filePath": "\/Users\/cybexo\/Desktop\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/NxgLog.swift",
       "kind": "BooleanLiteral",
       "offset": 318,
-      "length": 4,
-      "value": "true"
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Desktop\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/utils\/NxgLog.swift",
       "kind": "StringLiteral",
-      "offset": 433,
+      "offset": 434,
       "length": 9,
       "value": "\"NXG-CMP\""
     },
