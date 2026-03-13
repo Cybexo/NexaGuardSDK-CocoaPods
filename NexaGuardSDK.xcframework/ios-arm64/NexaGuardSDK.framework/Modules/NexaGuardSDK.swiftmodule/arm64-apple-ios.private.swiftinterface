@@ -203,6 +203,8 @@ public enum ConsentAction : Swift.Equatable {
   public var googleConsentModeEnabled: Swift.Bool
   public func debugPrintFirebaseConsentAPIPresence()
   public func setTCFAdvertiserConsentMode(enabled: Swift.Bool)
+  public func setAnalyticsStorageConsent(granted: Swift.Bool)
+  public func getAnalyticsStorageConsent() -> Swift.Bool
   public var deferGCMUntilHostReady: Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
   public func initialize(settingsId: Swift.String, completion: (() -> Swift.Void)? = nil)

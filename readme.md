@@ -1,7 +1,7 @@
 
 # NexaGuard CMP SDK for iOS (`NexaGuardSDK`)
 
-**Privacy‑first, IAB‑TCF v2.2/GPP–compliant Consent Management Platform — in one tiny Swift package.**
+**Privacy‑first, IAB TCF 2.3 + GPP compliant Consent Management Platform — in one tiny Swift package.**
 
 ---
 
@@ -10,11 +10,29 @@
 |                         |                                                                                |
 |-------------------------|--------------------------------------------------------------------------------|
 | **🚀 Drop‑in UI**         | Modern banner **+** second layer with light/dark auto‑theme & rounded corners.   |
+| **✅ TCF 2.3 compliant**  | Supports IAB Europe TCF 2.3 consent signaling across first layer and preferences. |
 | **🔒 Reg‑tech inside**    | Generates full *Core* + *Disclosed / Allowed* TC‑String, CMP ID **471**.         |
 | **📶 Offline‑first**      | Bundles last GVL snapshot & works without network after first launch.            |
 | **🍪 Storage disclosure** | Per‑vendor cookie/device storage inventory dialog (ePrivacy Art. 5 / TTDSG §25). |
 | **🧑‍💻 Pure Swift**      | No Objective‑C runtime tricks, no analytics, absolutely no tracking.             |
 | **💡 Tiny footprint**     | ≈ 180 kB zipped **XCFramework** – link & ship.                                   |
+
+---
+
+## 🆕 Latest Public Updates
+
+- Improved EU first-layer CMP UX with a more native iOS bottom-sheet style.
+- Added cleaner first-layer content preview for data processing options.
+- Added inline expand/collapse behavior for **View data processing options (N)**.
+- Kept first-layer actions deterministic:
+  - **Accept All** grants all supported consent mode keys.
+  - **Reject All** denies all supported consent mode keys.
+- Separated `analytics_storage` as SDK-managed non-TCF consent state.
+- Added dedicated second-layer non-TCF analytics control.
+- Improved special-feature behavior:
+  - Show Special Features only when at least one configured vendor claims them.
+  - Write special-feature consent only for vendors that claim that feature.
+- Reduced redundant consent/log noise in repeated no-op write paths.
 
 ---
 
@@ -118,12 +136,12 @@ extension UIApplication {
 
 ## 🤝 Support
 
-- **Docs:** [https://developer.nexaguard.com/ios](https://developer.nexaguard.com/ios)
-- **Dashboard:** [https://app.nexaguard.com](https://app.nexaguard.com)
+- **Docs:** [https://developer.nexaguard.com/](https://developer.nexaguard.com/)
+- **Dashboard:** [https://dashboard.nexaguard.com](https://dashboard.nexaguard.com)
 - **Email:** [ios@nexaguard.com](mailto:ios@nexaguard.com)
 
 > 📨 We reply within one business day – usually faster.
 
 ---
 
-© 2025 **NexaGuard Inc.**  All rights reserved.
+© 2026 **NexaGuard Inc.**  All rights reserved.
