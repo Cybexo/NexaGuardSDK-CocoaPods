@@ -12573,14 +12573,14 @@
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeDetailsViewController.swift",
       "kind": "Array",
-      "offset": 1242,
+      "offset": 1344,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeDetailsViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1271,
+      "offset": 1473,
       "length": 5,
       "value": "false"
     },
@@ -12608,49 +12608,49 @@
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Array",
-      "offset": 1686,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
-      "kind": "Array",
       "offset": 1750,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
+      "kind": "Array",
+      "offset": 1814,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Dictionary",
-      "offset": 1819,
+      "offset": 1883,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1886,
+      "offset": 1950,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Dictionary",
-      "offset": 2001,
+      "offset": 2065,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "Dictionary",
-      "offset": 2058,
+      "offset": 2122,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cybexo\/Dev\/CYBEXO-MBP\/NexaGuardSDK-iOS\/cmp\/cmp\/ui\/PurposeTabViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 23959,
+      "offset": 26899,
       "length": 5,
       "value": "false"
     },
