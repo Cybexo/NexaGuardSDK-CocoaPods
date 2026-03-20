@@ -13,11 +13,159 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
+public struct NXGGlobalPolicyRuntimeSnapshot {
+  public let moduleId: Swift.String?
+  public let regimeId: Swift.String?
+  public let moduleRegistered: Swift.Bool
+  public let outputReady: Swift.Bool
+  public let hasError: Swift.Bool
+  public let bridgeApplied: Swift.Bool
+  public let adsMode: Swift.String?
+  public let npa: Swift.Int?
+}
+public struct NXGUspv1CompatibilityData {
+  public let version: Swift.Int
+  public let uspString: Swift.String
+  public let usPrivacyString: Swift.String
+}
+public struct NXGGppRuntimePartnerCompatAliases {
+  public let tcfcav1: [Swift.String]
+  public let uspv1: [Swift.String]
+}
+public struct NXGUspapiCommandAliases {
+  public let getData: [Swift.String]
+  public let getString: [Swift.String]
+}
+public struct NXGGppGlobalPolicySelectionSnapshot {
+  public let moduleId: Swift.String?
+  public let regimeId: Swift.String?
+  public let moduleRegistered: Swift.Bool
+}
+public struct NXGGppRuntimeContractSnapshot {
+  public let reason: Swift.String
+  public let generatedAt: Swift.String
+  public let gppVersion: Swift.String
+  public let cmpStatus: Swift.String
+  public let signalStatus: Swift.String
+  public let supportedAPIs: [Swift.String]
+  public let sectionList: [Swift.Int]
+  public let applicableSections: [Swift.Int]
+  public let tcfcav1ReadinessEnabled: Swift.Bool
+  public let uspv1CompatibilityEnabled: Swift.Bool
+  public let partnerCompatAliases: NexaGuardSDK.NXGGppRuntimePartnerCompatAliases
+  public let uspapiCommandAliases: NexaGuardSDK.NXGUspapiCommandAliases
+  public let uspapiDataReturnKeys: [Swift.String]
+  public let globalPolicySelection: NexaGuardSDK.NXGGppGlobalPolicySelectionSnapshot
+  public let globalPolicyRegistrySize: Swift.Int
+  public let legacyAliasDiagnosticsCount: Swift.Int
+}
+public struct NXGMigrationCompatibilityDiagnostic {
+  public let action: Swift.String
+  public let ts: Swift.String
+  public let fromKey: Swift.String?
+  public let toKey: Swift.String?
+  public let note: Swift.String?
+}
+public struct NXGIOSV2MigrationHardeningSnapshot {
+  public let reason: Swift.String
+  public let generatedAt: Swift.String
+  public let surface: Swift.String
+  public let status: Swift.String
+  public let tcfcav1ReadinessEnabled: Swift.Bool
+  public let uspv1CompatibilityEnabled: Swift.Bool
+  public let globalPolicyBridgeEnabled: Swift.Bool
+  public let usDecisionStored: Swift.Bool
+  public let uspv1CanonicalPresent: Swift.Bool
+  public let uspv1Section6Present: Swift.Bool
+  public let uspv1CanonicalValid: Swift.Bool
+  public let uspv1Section6Valid: Swift.Bool
+  public let uspv1ValuesAligned: Swift.Bool
+  public let migrationDiagnosticsCount: Swift.Int
+  public let migrationLastAction: Swift.String?
+  public let globalPolicyModuleId: Swift.String?
+  public let globalPolicyRegimeId: Swift.String?
+  public let globalPolicyModuleRegistered: Swift.Bool
+  public let globalPolicyHasError: Swift.Bool
+  public let globalPolicyBridgeApplied: Swift.Bool
+  public let globalPolicyFailOpenReady: Swift.Bool
+  public let nonDestructiveRollbackReady: Swift.Bool
+}
+public struct NXGIOSV2DriftWatchSnapshot {
+  public let schema: Swift.String
+  public let reason: Swift.String
+  public let generatedAt: Swift.String
+  public let surface: Swift.String
+  public let status: Swift.String
+  public let runtimeContractSignalStatus: Swift.String
+  public let migrationHardeningStatus: Swift.String
+  public let sectionListSorted: Swift.Bool
+  public let partnerAliasParity: Swift.Bool
+  public let uspapiAliasParity: Swift.Bool
+  public let uspapiDataReturnKeyParity: Swift.Bool
+  public let tcfcav1GateContractReady: Swift.Bool
+  public let uspv1GateContractReady: Swift.Bool
+  public let globalPolicyRuntimeHealthy: Swift.Bool
+  public let migrationDiagnosticsCount: Swift.Int
+  public let failingChecks: [Swift.String]
+}
+public struct NXGIOSV3ObservabilityDriftGateSnapshot {
+  public let schema: Swift.String
+  public let reason: Swift.String
+  public let generatedAt: Swift.String
+  public let surface: Swift.String
+  public let status: Swift.String
+  public let severity: Swift.String
+  public let gateOpen: Swift.Bool
+  public let runtimeSignalStatus: Swift.String
+  public let migrationHardeningStatus: Swift.String
+  public let driftWatchStatus: Swift.String
+  public let requiredChecks: [Swift.String]
+  public let failingChecks: [Swift.String]
+  public let failingChecksCount: Swift.Int
+}
+public struct NXGIOSV3IncidentRollbackContinuitySnapshot {
+  public let schema: Swift.String
+  public let reason: Swift.String
+  public let generatedAt: Swift.String
+  public let surface: Swift.String
+  public let status: Swift.String
+  public let severity: Swift.String
+  public let incidentTriggered: Swift.Bool
+  public let automationRan: Swift.Bool
+  public let drillsRequested: Swift.Int
+  public let drillsExecuted: Swift.Int
+  public let rollbackHistoryCount: Swift.Int
+  public let latestDrillId: Swift.String?
+  public let latestDrillStatus: Swift.String?
+  public let latestDrillContinuityReady: Swift.Bool
+  public let observabilityGateOpen: Swift.Bool
+  public let observabilityStatus: Swift.String
+  public let requiredChecks: [Swift.String]
+  public let failingRequiredChecks: [Swift.String]
+  public let failingRequiredChecksCount: Swift.Int
+}
+public struct NXGIOSV2RollbackIncidentDrillSnapshot {
+  public let schema: Swift.String
+  public let reason: Swift.String
+  public let generatedAt: Swift.String
+  public let surface: Swift.String
+  public let drillId: Swift.String
+  public let status: Swift.String
+  public let executed: Swift.Bool
+  public let driftWatchStatus: Swift.String
+  public let migrationHardeningStatus: Swift.String
+  public let runtimeSignalStatus: Swift.String
+  public let nonDestructiveRollbackReady: Swift.Bool
+  public let rollbackContinuityReady: Swift.Bool
+  public let failingRequiredChecks: [Swift.String]
+  public let failingRequiredChecksCount: Swift.Int
+}
 public struct BrandingConfig {
   public let logoUrl: Swift.String?
   public let brandColor: Swift.String?
   public let privacyUrl: Swift.String?
   public let layout: Swift.String?
+  public let bannerLayoutEffective: Swift.String
   public let bannerText: Swift.String?
   public let showReject: Swift.Bool
   public let showCustomizeButton: Swift.Bool
@@ -36,8 +184,22 @@ public struct BrandingConfig {
   public let usState: Swift.String?
   public let isUserEU: Swift.Bool?
   public let gpc: Swift.Bool?
+  public let globalRegime: Swift.String?
+  public let globalPolicyModuleId: Swift.String?
+  public let globalPolicyModule: Swift.String?
+  public let globalPolicyComplianceBridgeEnabled: Swift.Bool?
+  public let tcfcav1Enabled: Swift.Bool?
+  public let uspv1Enabled: Swift.Bool?
+  public let uspv1LspaCovered: Swift.Bool?
+  public let theme: Swift.String
+  public let themeSelected: Swift.String
+  public let themePreset: Swift.String
+  public let themeEffective: Swift.String
+  public let themeFallbackReason: Swift.String
+  public let themeHasOverrides: Swift.Bool
+  public let themeTokens: NexaGuardSDK.NXGThemeTokens
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showReject: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?, consentMode: Swift.Bool = true, userCountry: Swift.String? = nil, usRegime: Swift.String? = nil, usState: Swift.String? = nil, isUserEU: Swift.Bool? = nil, gpc: Swift.Bool? = nil)
+  public init(logoUrl: Swift.String?, brandColor: Swift.String?, privacyUrl: Swift.String?, layout: Swift.String?, bannerText: Swift.String?, showReject: Swift.Bool, showCustomizeButton: Swift.Bool, acceptButtonText: Swift.String?, rejectButtonText: Swift.String?, manageButtonText: Swift.String?, customizeLinkId: Swift.String?, selectedVendorIds: [Swift.Int]?, selectedPurposesIds: [Swift.Int]?, vendorListVersion: Swift.Int?, configVersion: Swift.Int?, publisherCC: Swift.String?, consentMode: Swift.Bool = true, userCountry: Swift.String? = nil, usRegime: Swift.String? = nil, usState: Swift.String? = nil, isUserEU: Swift.Bool? = nil, gpc: Swift.Bool? = nil, globalRegime: Swift.String? = nil, globalPolicyModuleId: Swift.String? = nil, globalPolicyModule: Swift.String? = nil, globalPolicyComplianceBridgeEnabled: Swift.Bool? = nil, tcfcav1Enabled: Swift.Bool? = nil, uspv1Enabled: Swift.Bool? = nil, uspv1LspaCovered: Swift.Bool? = nil, theme: Swift.String? = nil, themeSelected: Swift.String? = nil, themePreset: Swift.String? = nil, themeEffective: Swift.String? = nil, bannerLayoutEffective: Swift.String? = nil, themeFallbackReason: Swift.String? = nil, themeTokensResolved: [Swift.String : Any]? = nil, themeTokenOverrides: [Swift.String : Any]? = nil, themeOverrides: [Swift.String : Any]? = nil, customThemeTokens: [Swift.String : Any]? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(json: [Swift.String : Any])
@@ -98,6 +260,53 @@ public struct VendorModel : Swift.Codable {
   public static func setVendorListVersion(_ version: Swift.Int)
   public static func resetConsent()
   @objc deinit
+}
+public enum NXGThemePresetId : Swift.String, Swift.CaseIterable {
+  case neutral
+  case corporate
+  case dark
+  case accessible
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias AllCases = [NexaGuardSDK.NXGThemePresetId]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [NexaGuardSDK.NXGThemePresetId] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct NXGThemeTokens : Swift.Equatable {
+  public let cardBackground: Swift.String
+  public let cardBorder: Swift.String
+  public let textPrimary: Swift.String
+  public let textSecondary: Swift.String
+  public let primaryButtonBackground: Swift.String
+  public let primaryButtonText: Swift.String
+  public let secondaryButtonBackground: Swift.String
+  public let secondaryButtonText: Swift.String
+  public let secondaryButtonBorder: Swift.String
+  public let manageLinkText: Swift.String
+  public let linkColor: Swift.String
+  public let focusRing: Swift.String
+  public let overlayScrim: Swift.String
+  public init(cardBackground: Swift.String, cardBorder: Swift.String, textPrimary: Swift.String, textSecondary: Swift.String, primaryButtonBackground: Swift.String, primaryButtonText: Swift.String, secondaryButtonBackground: Swift.String, secondaryButtonText: Swift.String, secondaryButtonBorder: Swift.String, manageLinkText: Swift.String, linkColor: Swift.String, focusRing: Swift.String, overlayScrim: Swift.String)
+  public static let neutral: NexaGuardSDK.NXGThemeTokens
+  public static let corporate: NexaGuardSDK.NXGThemeTokens
+  public static let dark: NexaGuardSDK.NXGThemeTokens
+  public static let accessible: NexaGuardSDK.NXGThemeTokens
+  public static func == (a: NexaGuardSDK.NXGThemeTokens, b: NexaGuardSDK.NXGThemeTokens) -> Swift.Bool
+}
+public struct NXGResolvedThemeConfig {
+  public let themeSelected: NexaGuardSDK.NXGThemePresetId
+  public let themePreset: NexaGuardSDK.NXGThemePresetId
+  public let themeEffective: NexaGuardSDK.NXGThemePresetId
+  public let themeFallbackReason: Swift.String
+  public let bannerLayoutEffective: Swift.String
+  public let themeHasOverrides: Swift.Bool
+  public let themeTokens: NexaGuardSDK.NXGThemeTokens
 }
 public protocol SecondLayerDelegate : AnyObject {
   func didAcceptAll()
@@ -205,6 +414,21 @@ public enum ConsentAction : Swift.Equatable {
   public func setTCFAdvertiserConsentMode(enabled: Swift.Bool)
   public func setAnalyticsStorageConsent(granted: Swift.Bool)
   public func getAnalyticsStorageConsent() -> Swift.Bool
+  public func getGlobalPolicyRuntimeSnapshot() -> NexaGuardSDK.NXGGlobalPolicyRuntimeSnapshot
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getUspv1CompatibilityString() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getUspv1CompatibilityData() -> NexaGuardSDK.NXGUspv1CompatibilityData?
+  #endif
+  public func getGppRuntimeContractSnapshot(reason: Swift.String = "read") -> NexaGuardSDK.NXGGppRuntimeContractSnapshot
+  public func getMigrationCompatibilityDiagnostics(limit: Swift.Int = 20) -> [NexaGuardSDK.NXGMigrationCompatibilityDiagnostic]
+  public func getMigrationBackwardCompatHardeningSnapshot(reason: Swift.String = "read") -> NexaGuardSDK.NXGIOSV2MigrationHardeningSnapshot
+  public func getOperationalDriftWatchSnapshot(reason: Swift.String = "read") -> NexaGuardSDK.NXGIOSV2DriftWatchSnapshot
+  public func getIOSV3ObservabilityDriftGateSnapshot(reason: Swift.String = "read") -> NexaGuardSDK.NXGIOSV3ObservabilityDriftGateSnapshot
+  public func runRollbackIncidentDrill(reason: Swift.String = "manual") -> NexaGuardSDK.NXGIOSV2RollbackIncidentDrillSnapshot
+  public func runIOSV3IncidentRollbackContinuityAutomation(reason: Swift.String = "scheduled", drillRuns: Swift.Int = 3) -> NexaGuardSDK.NXGIOSV3IncidentRollbackContinuitySnapshot
+  public func getRollbackIncidentDrillHistory(limit: Swift.Int = 10) -> [NexaGuardSDK.NXGIOSV2RollbackIncidentDrillSnapshot]
   public var deferGCMUntilHostReady: Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
   public func initialize(settingsId: Swift.String, completion: (() -> Swift.Void)? = nil)
@@ -249,6 +473,9 @@ public enum ConsentAction : Swift.Equatable {
   #endif
   @objc deinit
 }
+extension NexaGuardSDK.NXGThemePresetId : Swift.Equatable {}
+extension NexaGuardSDK.NXGThemePresetId : Swift.Hashable {}
+extension NexaGuardSDK.NXGThemePresetId : Swift.RawRepresentable {}
 extension NexaGuardSDK.NxgLogLevel : Swift.Equatable {}
 extension NexaGuardSDK.NxgLogLevel : Swift.Hashable {}
 extension NexaGuardSDK.NxgLogLevel : Swift.RawRepresentable {}
