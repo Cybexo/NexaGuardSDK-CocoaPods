@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# File: /Users/cybexo/Desktop/NexaGuardSDK-CocoaPods/push.sh
+# File: push.sh (repo root)
 # One‑command publish: add → commit → rebase → push (auto‑retry, signature‑clean)
 
 set -euo pipefail
@@ -14,6 +14,14 @@ git fetch --tags --prune origin
 # 1. Remove all _CodeSignature folders so they never reach Git
 # ──────────────────────────────────────────────────────────────
 find NexaGuardSDK.xcframework -name _CodeSignature -type d -exec rm -rf {} +
+
+# 1b. Redact local build-machine paths from packaged metadata
+#     (Swift ABI descriptors + dSYM relocation manifests)
+find NexaGuardSDK.xcframework -type f -name '*.abi.json' -print0 \
+  | xargs -0 -I{} perl -0777 -i -pe 's/"filePath"\s*:\s*"[^"]*"/"filePath": "<redacted>"/g' "{}"
+
+find NexaGuardSDK.xcframework -type f -path '*/dSYMs/*/Relocations/*/*.yml' -print0 \
+  | xargs -0 -I{} perl -i -pe 's#(binary-path:\s+)\x27[^\x27]+\x27#${1}\x27<redacted>\x27#g' "{}"
 
 # ──────────────────────────────────────────────────────────────
 # 2. Stage and (optionally) commit
