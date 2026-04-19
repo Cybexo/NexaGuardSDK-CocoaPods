@@ -25204,34 +25204,34 @@
       "filePath": "<redacted>",
       "kind": "StringLiteral",
       "offset": 144,
-      "length": 27,
-      "value": "\"https:\/\/cdn.nexaguard.com\""
+      "length": 25,
+      "value": "\"https:\/\/edge.cybexo.com\""
     },
     {
       "filePath": "<redacted>",
       "kind": "StringLiteral",
-      "offset": 198,
+      "offset": 196,
       "length": 10,
       "value": "\"gvl.json\""
     },
     {
       "filePath": "<redacted>",
       "kind": "BooleanLiteral",
-      "offset": 1070,
+      "offset": 1068,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "<redacted>",
       "kind": "BooleanLiteral",
-      "offset": 1204,
+      "offset": 1202,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "<redacted>",
       "kind": "StringLiteral",
-      "offset": 1454,
+      "offset": 1452,
       "length": 23,
       "value": "\"nxg.cdn.debug.routing\""
     }

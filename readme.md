@@ -56,7 +56,7 @@ Then `pod install` – done.
 
 ### Manual (XCFramework)
 
-1. [Download the latest `NexaGuardSDK.xcframework`](https://github.com/NexaGuard/NexaGuardSDK-CocoaPods/releases) from the Releases page of this repository.
+1. [Download the latest `NexaGuardSDK.xcframework`](https://github.com/Cybexo/NexaGuardSDK-CocoaPods/releases) from the Releases page of this repository.
 2. Drag the `.xcframework` into your Xcode project under **Frameworks, Libraries & Embedded Content** (*Embed & Sign*).
 
 ---

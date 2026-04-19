@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://www.nexaguard.com'
   s.license          = { :type => 'Commercial', :file => 'LICENSE' }
   s.author           = { 'NexaGuard' => 'ios@nexaguard.com' }
-  s.source           = { :git => 'https://github.com/NexaGuard/NexaGuardSDK-CocoaPods.git',
+  s.source           = { :git => 'https://github.com/Cybexo/NexaGuardSDK-CocoaPods.git',
                          :tag => s.version.to_s }
   s.documentation_url = 'https://developer.nexaguard.com/'
 
@@ -37,4 +37,3 @@ Pod::Spec.new do |s|
   # ---- SwiftPM-like linkage tweaks (optional) ------------------------------
   s.frameworks = 'UIKit', 'WebKit'
 end
-
